@@ -1,0 +1,34 @@
+body, html { 
+  font-family: 'Vazir', sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+.home-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  background-color: rgb(4, 209, 89);
+}
+
+
+.home-center {
+
+  width: 50%; 
+  text-align: center; 
+ 
+}
+.home-center h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+
+  align-items: center;
+}
+.home-center p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  align-items:center ;
+}
