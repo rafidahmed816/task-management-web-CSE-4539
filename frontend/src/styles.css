@@ -1,34 +1,60 @@
-body, html { 
+/* Global Styles */
+body, html {
   font-family: 'Vazir', sans-serif;
-}
-*{
   margin: 0;
   padding: 0;
-  
 }
+
+/* Navbar Container */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+nav div {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav button {
+  background-color: #4d4d4d;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/* Home Page Styles */
 .home-container {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  height: 100vh; 
-  background-color: rgb(4, 209, 89);
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(27, 207, 102);
 }
-
 
 .home-center {
-
-  width: 50%; 
-  text-align: center; 
- 
+  width: 50%;
+  text-align: center;
+  padding: 2rem;
 }
+
 .home-center h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-
-  align-items: center;
+  color: rgb(12, 7, 7);
 }
+
 .home-center p {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  align-items:center ;
+  color: rgb(34, 23, 36);
 }
