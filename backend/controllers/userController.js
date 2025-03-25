@@ -18,8 +18,7 @@ const register = async (req, res) => {
 
     await user.save();
     
-    // // Here you would send an email verification link (simulation)
-    // res.status(201).json({ msg: 'User registered. Please verify your email.' });
+    res.status(200).json({ msg: 'User registered !' });
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server error');

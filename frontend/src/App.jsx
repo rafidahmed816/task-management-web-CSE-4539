@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Login from "./components/Login";
 import Navbar from "./components/Navbar";
+import Register from "./components/Register";
 import Home from "./pages/Home";
 import "./styles.css";
 
@@ -38,6 +40,10 @@ function App() {
       <Navbar user={user} logout={logout} />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login setUser={setUser} />} />
+        <Route path="/register" element={<Register />} />
+        {/* <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/admin" element={<AdminPanel />} /> */}
       </Routes>
     </Router>
   );

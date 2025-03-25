@@ -58,3 +58,38 @@ nav button {
   margin-bottom: 1rem;
   color: rgb(34, 23, 36);
 }
+/* Forms */
+form {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #0ef174;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #080202;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}

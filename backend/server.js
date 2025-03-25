@@ -1,12 +1,14 @@
 // server.js
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const connectDB = require('./config/db');
 require('dotenv').config();
 
 // database connection
 connectDB();
 
+app.use(cors());
 app.use(express.json());
 
 // Define routes
