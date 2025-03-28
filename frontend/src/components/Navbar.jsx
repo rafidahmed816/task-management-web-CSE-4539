@@ -7,7 +7,7 @@ const Navbar = ({ user, logout }) => {
     <nav>
       <div>
         <Link to="/">Home</Link>
-        {user && <Link to="/dashboard">Dashboard</Link>}
+        {user && user.role === "user" && <Link to="/dashboard">Dashboard</Link>}
         {user && user.role === "admin" && <Link to="/admin">Admin Panel</Link>}
       </div>
       <div>

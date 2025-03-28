@@ -17,7 +17,7 @@ const Login = ({ setUser }) => {
       localStorage.setItem("token", data.token);
       setUser(data);
       alert("Login successful!");
-      //navigate("/dashboard");
+      navigate("/dashboard");
     } else {
       alert("Login failed! Check your credentials.");
     }

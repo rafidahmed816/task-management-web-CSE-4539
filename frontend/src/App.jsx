@@ -1,15 +1,20 @@
 import { useEffect, useState } from "react";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes,Navigate } from "react-router-dom";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import Register from "./components/Register";
 import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
+import AdminPanel from "./pages/AdminPanel";
+
+import {jwtDecode} from "jwt-decode";
+
 import "./styles.css";
 
 function App() {
   const [user, setUser] = useState(null);
 
-  // In App.js useEffect
+  
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
@@ -42,8 +47,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login setUser={setUser} />} />
         <Route path="/register" element={<Register />} />
-        {/* <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/admin" element={<AdminPanel />} /> */}
+        <Route path="/dashboard" element={user && user.role === "user" ? <Dashboard /> : <Navigate to="/" />} />
+        {/* <Route path="/admin" element={user && user.role === "admin" ? <AdminPanel /> : <Navigate to="/" />} /> */}
       </Routes>
     </Router>
   );
