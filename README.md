@@ -1,5 +1,5 @@
 
-# 🚀 Secure Task Management System (TMS)
+# 🚀 Task Management System
 
 A robust task management application for users and admins with secure authentication, role-based access control, and comprehensive CRUD functionalities.  
 
@@ -24,51 +24,65 @@ Secure Task Management System (TMS) is designed to simplify task handling, offer
 - Sorting and filtering by priority, due date, and search keywords  
 - Inline editing and task completion options  
 
-### ✅ Responsive Design  
-- Minimalistic and user-friendly UI using CSS (no external libraries)  
 
 ---
 
 ## 📂 Project Structure
 
 ```bash
-Secure-Task-Management-System/
-├── backend/
-│   ├── server.js
-│   ├── config/
-│   │   └── db.js
-│   ├── controllers/
-│   │   ├── userController.js
-│   │   ├── taskController.js
-│   │   └── adminController.js
-│   ├── middleware/
-│   │   ├── auth.js
-│   │   └── adminAuth.js
-│   ├── models/
-│   │   ├── User.js
-│   │   └── Task.js
-│   ├── routes/
-│   │   ├── userRoutes.js
-│   │   ├── taskRoutes.js
-│   │   └── adminRoutes.js
-│   └── .env
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── Navbar.js
-│   │   │   ├── Login.js
-│   │   │   ├── Register.js
-│   │   │   ├── TaskList.js
-│   │   │   ├── TaskForm.js
-│   │   │   └── AdminPanel.js
-│   │   ├── pages/
-│   │   │   ├── Home.js
-│   │   │   ├── Dashboard.js
-│   │   ├── App.js
-│   │   ├── index.js
-│   │   └── styles.css
-│   └── package.json
+task-management-web-CSE-4539/
+├── backend
+│   ├── config
+│   │   └── db.js
+│   ├── controllers
+│   │   ├── adminController.js
+│   │   ├── taskController.js
+│   │   └── userController.js
+│   ├── .env
+│   ├── middleware
+│   │   ├── adminAuth.js
+│   │   └── userAuth.js
+│   ├── models
+│   │   ├── Task.js
+│   │   └── User.js
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── routes
+│   │   ├── adminRoutes.js
+│   │   ├── taskRoutes.js
+│   │   └── userRoutes.js
+│   ├── server.js
+│   └── utils
+├── frontend
+│   ├── Daco_1960469.png
+│   ├── eslint.config.js
+│   ├── .gitignore
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── public
+│   │   └── vite.svg
+│   ├── README.md
+│   ├── src
+│   │   ├── api.jsx
+│   │   ├── App.jsx
+│   │   ├── assets
+│   │   │   └── react.svg
+│   │   ├── components
+│   │   │   ├── Login.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Register.jsx
+│   │   │   ├── TaskForm.jsx
+│   │   │   └── TaskList.jsx
+│   │   ├── index.css
+│   │   ├── main.jsx
+│   │   ├── pages
+│   │   │   ├── AdminPanel.jsx
+│   │   │   ├── Dashboard.jsx
+│   │   │   └── Home.jsx
+│   │   └── styles.css
+│   └── vite.config.js
+├── .gitignore
 └── README.md
 ```
 
@@ -80,8 +94,8 @@ Secure-Task-Management-System/
 
 1. **Clone the Repository:**
    ```bash
-   git clone <repository-url>
-   cd Secure-Task-Management-System/backend
+   git clone https://github.com/rafidahmed816/task-management-web-CSE-4539.git
+   cd task-management-web-CSE-4539/backend
    ```
 
 2. **Install Dependencies:**
@@ -89,16 +103,7 @@ Secure-Task-Management-System/
    npm install
    ```
 
-3. **Environment Variables:**
-   Create a `.env` file with:
-   ```ini
-   MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_jwt_secret_key
-   JWT_REFRESH_SECRET=your_jwt_refresh_secret_key
-   PORT=5000
-   ```
-
-4. **Start the Server:**
+3. **Start the Server:**
    ```bash
    npm start
    ```
@@ -157,36 +162,9 @@ Secure-Task-Management-System/
 - React  
 - React Router  
 - Axios  
-- CSS (No UI libraries)  
+- CSS 
 
 ---
 
-## 🤝 Contributing
 
-Contributions are welcome!  
-1. Fork the repository.  
-2. Create a new branch (`git checkout -b feature/your-feature`)  
-3. Commit your changes (`git commit -m 'Add your feature'`)  
-4. Push to the branch (`git push origin feature/your-feature`)  
-5. Open a pull request.  
-
----
-
-## 📝 License
-
-This project is licensed under the MIT License.  
-
----
-
-## 🙏 Acknowledgements
-
-- Built with ❤️ using Node.js, React, and MongoDB.  
-- Special thanks to all developers and contributors!  
-
----
-
-**Happy Task Managing! 🎉**
-```
-
----
 

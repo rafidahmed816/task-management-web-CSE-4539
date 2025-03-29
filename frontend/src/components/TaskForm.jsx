@@ -35,7 +35,7 @@ const TaskForm = ({ refreshTasks }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await createTask(form, token);
-    refreshTasks(); // Refresh tasks after creation
+    refreshTasks(); 
     setForm({
       title: "",
       description: "",

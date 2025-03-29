@@ -26,21 +26,7 @@ const register = async (req, res) => {
 };
 
 
-// Simulated email verification
-// const verifyEmail = async (req, res) => {
-//   const { email } = req.body;
-//   try {
-//     let user = await User.findOne({ email });
-//     if (!user) return res.status(404).json({ msg: 'User not found' });
 
-//     user.isVerified = true;
-//     await user.save();
-//     res.json({ msg: 'Email verified successfully.' });
-//   } catch (err) {
-//     console.error(err.message);
-//     res.status(500).send('Server error');
-//   }
-// };
 
 // Login user and return JWT token
 const login = async (req, res) => {

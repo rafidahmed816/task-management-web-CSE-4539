@@ -11,7 +11,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div>
+    <div className="dashboard">
       <TaskForm refreshTasks={refreshTasks} />
       <TaskList key={refresh} />
     </div>
