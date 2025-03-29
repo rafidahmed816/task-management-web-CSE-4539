@@ -48,7 +48,7 @@ function App() {
         <Route path="/login" element={<Login setUser={setUser} />} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={user && user.role === "user" ? <Dashboard /> : <Navigate to="/" />} />
-        {/* <Route path="/admin" element={user && user.role === "admin" ? <AdminPanel /> : <Navigate to="/" />} /> */}
+        <Route path="/admin" element={user && user.role === "admin" ? <AdminPanel /> : <Navigate to="/" />} />
       </Routes>
     </Router>
   );

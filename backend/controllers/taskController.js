@@ -1,9 +1,32 @@
 // controllers/taskController.js
 const Task = require('../models/Task');
 
+// Utility function to validate category
+const VALID_CATEGORIES = [
+  'Work',
+  'Personal',
+  'Study',
+  'Health & Fitness',
+  'Shopping',
+  'Finance',
+  'Home',
+  'Errands',
+  'Travel',
+  'Hobbies',
+  'Important',
+  'Urgent',
+  'Miscellaneous',
+];
+
 // Create a new task
 const createTask = async (req, res) => {
   const { title, description, dueDate, priority, category } = req.body;
+
+  // Validate category
+  if (category && !VALID_CATEGORIES.includes(category)) {
+    return res.status(400).json({ msg: 'Invalid category selected' });
+  }
+
   try {
     const newTask = new Task({
       title,
@@ -31,7 +54,6 @@ const getTasks = async (req, res) => {
     if (req.query.category) filter.category = req.query.category;
     if (req.query.completed) filter.completed = req.query.completed === 'true';
 
-    
     let sort = {};
     if (req.query.sortBy) {
       const parts = req.query.sortBy.split(':');
@@ -60,12 +82,17 @@ const getTask = async (req, res) => {
   }
 };
 
-// Update an existing task
+// Update a task
 const updateTask = async (req, res) => {
   const { title, description, dueDate, priority, category, completed } = req.body;
   const taskFields = { title, description, dueDate, priority, category, completed };
 
-  // Remove undefined fields
+  // Validate category
+  if (category && !VALID_CATEGORIES.includes(category)) {
+    return res.status(400).json({ msg: 'Invalid category selected' });
+  }
+
+  // Remove undefined values from taskFields
   for (let key in taskFields) {
     if (taskFields[key] === undefined) delete taskFields[key];
   }
@@ -96,4 +123,5 @@ const deleteTask = async (req, res) => {
     res.status(500).send('Server error');
   }
 };
+
 module.exports = { createTask, getTasks, getTask, updateTask, deleteTask };
